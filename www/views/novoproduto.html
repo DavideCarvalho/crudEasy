@@ -1,0 +1,13 @@
+<ion-view cache-view="false">
+  <ion-nav-title>Novo Produto</ion-nav-title>
+  <ion-content>
+    <form ng-submit="novoproduto.mandarProduto(novoproduto.product)">
+      <label>Nome</label>
+      <input type="text" ng-model="novoproduto.product.nome">
+      <label>Preço</label>
+      <input type="number" min='0' step="0.01" ng-model="novoproduto.product.preco">
+      <p>{{novoproduto.product.nome}} - {{novoproduto.product.preco | currency}}</p>
+      <button type="submit" class="button button-block button-positive">Adicionar Produto</button>
+    </form>
+  </ion-content>
+</ion-view>

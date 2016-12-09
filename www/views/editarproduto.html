@@ -1,0 +1,14 @@
+<ion-view cache-view="false">
+  <ion-nav-title>Novo Produto</ion-nav-title>
+  <ion-content>
+    <form ng-submit="editarproduto.editarProduto(editarproduto.product)">
+      <span>{{editarproduto.mensagem}}</span>
+      <label>Nome</label>
+      <input type="text" ng-model="editarproduto.product.Name">
+      <label>Preço</label>
+      <input type="number" min='0' step="0.01" ng-model="editarproduto.product.Price">
+      <p>{{editarproduto.product.Name}} - {{editarproduto.product.Price | currency}}</p>
+      <button type="submit" class="button button-block button-positive">Salvar edição</button>
+    </form>
+  </ion-content>
+</ion-view>
